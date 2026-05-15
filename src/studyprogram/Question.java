@@ -43,6 +43,23 @@ public class Question {
         this.feedback = feedback;
     }
 
+    
+    
+    /**
+     * check if the answer that the user selected is correct
+     * @param answer- the user's answer
+     * @return - output displaying if the user is correct or display feedback
+     */
+    public String ifCorrect(String answer){
+        String output;
+        if(answer.equals(correctAnswer)){
+            output="Correct Answer Good Job!";
+        }else{
+            output="Incorrect here is some feedback: \n"+feedback; 
+        }
+        return output;
+    } 
+
     /** @return The numerical ID of the question */
     public int getQuestionNumber() {
         return questionNumber;
